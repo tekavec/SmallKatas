@@ -12,11 +12,8 @@ namespace Tests
         public void Initialize()
         {
             _RomanNumerals = new RomanNumerals();
-            
         }
     
-
-
         [Test]
         public void OneToThree()
         {
@@ -113,6 +110,12 @@ namespace Tests
         public void Thousand()
         {
             Assert.AreEqual("M", _RomanNumerals.GetRomanFromArabic(1000));
+        }
+
+        [Test]
+        public void ARandomExample()
+        {
+            Assert.AreEqual("MCMXXVIII", _RomanNumerals.GetRomanFromArabic(1928));
         }
 
     }
